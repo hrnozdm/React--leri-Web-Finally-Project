@@ -6,7 +6,7 @@ const Filter = () => {
     <div className='flex'>
       {
         filterData.map((data,i)=>(
-          <div key={i}>{data.name}</div>
+          <div key={i} className='space-x-4 mx-4 bg-gray-100 hover:bg-gray-300 rounded-full p-2 cursor-pointer text-sm'>{data.name}</div>
         ))
       }
     </div>

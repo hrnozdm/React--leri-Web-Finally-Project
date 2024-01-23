@@ -1,15 +1,15 @@
 import React from 'react'
-import images from '../assets/images/images'
+import moment from  "moment"
 
-const HomeCard = () => {
+const HomeCard = ({video}) => {
   return (
-    <div className='w-[300px] m-3'>
-        <img src={images.deneme} alt="" />
-        <div className='font-bold mt-1'>Title Title Title Title Title Title</div>
-        <div className='mt-1'>Harun Özdemir</div>
-        <div className='text-sm text-gray-700 mt-1 tracking-wider'>
+    <div className='w-[300px] m-3 cursor-pointer'>
+        <img src={video?.snippet?.thumbnails?.high?.url} alt="" />
+        <div className='font-bold mt-1'>{(video?.snippet?.title).substring(0,45)}...</div>
+        <div className='mt-1'>{video?.snippet?.channelTitle}</div>
+        <div className='text-sm text-gray-700 mt-1 tracking-wider space-x-2'>
           <span>100K Görüntülenme</span>
-          <span>1 Yıl Önce</span>
+          <span>{moment(video?.snippet?.publishedAt).startOf('day').fromNow()}</span>
         </div>
     </div>
   )

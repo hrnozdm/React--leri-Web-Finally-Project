@@ -38,6 +38,14 @@
         id:8,
         name:'Futbol'
     },
+    {
+        id:9,
+        name:'Rap Yapma'
+    },
+    {
+        id:10,
+        name:'Yemek'
+    },
 ]
 
 
