@@ -8,13 +8,15 @@ const initialState={
 }
 
 
-export const getHomeVideos=createAsyncThunk('getHomeVideos',async ()=>{
+export const getHomeVideos=createAsyncThunk('getHomeVideos',async (data)=>{
 
     try {
         const response = await axios.get('https://youtube-v31.p.rapidapi.com/search', {
             params: {
                 part: 'id,snippet',
-                maxResults: '50'
+                maxResults: '100',
+                q:data
+                
               },
               headers: {
                 'X-RapidAPI-Key': 'b5088a8063mshcd64f90ba162ee2p14cfe2jsn8eb5798bd62a',
