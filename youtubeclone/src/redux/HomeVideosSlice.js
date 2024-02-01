@@ -14,12 +14,12 @@ export const getHomeVideos=createAsyncThunk('getHomeVideos',async (data)=>{
         const response = await axios.get('https://youtube-v31.p.rapidapi.com/search', {
             params: {
                 part: 'id,snippet',
-                maxResults: '100',
+                maxResults: '150',
                 q:data
                 
               },
               headers: {
-                'X-RapidAPI-Key': 'b5088a8063mshcd64f90ba162ee2p14cfe2jsn8eb5798bd62a',
+                'X-RapidAPI-Key': 'c672f60c79msh849b8d6caaac384p1fab90jsnfbf247a11c7f',
                 'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
               }
         });

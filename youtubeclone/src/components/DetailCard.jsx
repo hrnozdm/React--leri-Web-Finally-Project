@@ -30,7 +30,11 @@ const DetailCard = ({videoDetail}) => {
                <span className='flex items-center'><Icons.like/>{videoDetail?.statistics?.likeCount}</span>
                <span className='flex items-center'><b>Görüntülenme:</b>{videoDetail?.statistics?.viewCount}</span>
                <span className='flex items-center'><b>Yorum Sayısı:</b>{videoDetail?.statistics?.commentCount}</span>
-            </div>    
+            </div>
+             
+           
+           
+           
     </div>
   )
 }
