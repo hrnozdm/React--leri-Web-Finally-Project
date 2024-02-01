@@ -18,8 +18,8 @@ const Detail = () => {
     dispatch(getVideoDetails(id));
   }, [dispatch, id]);
 
-  //console.log(videoData);
-  console.log(videoComment);
+  console.log(videoData);
+  //console.log(videoComment);
 
   useEffect(() => {
       dispatch(getVideoComments(id));

@@ -4,10 +4,12 @@ import moment from 'moment'
 import Icons from '../assets/icons'
 
 const DetailCard = ({videoDetail}) => {
+    console.log(videoDetail);
   return (
     <div className='max-w-[650px] mx-20 my-9'>
            
            <ReactPlayer url={`https://www.youtube.com/watch?v=${videoDetail.id}`}/>
+           <div className='text-xl mt-2 text-red-500 cursor-pointer' onClick={()=>window.location=`/channel/${videoDetail?.snippet?.channelId}`}>Kanal İsmi :{videoDetail?.snippet?.channelTitle} </div>
            <div className='font-bold text-2xl mt-1'>{videoDetail?.snippet?.title}</div>
            <div className='space-x-2 text-gray-800 mt-1'>
                 <span>

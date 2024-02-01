@@ -2,12 +2,14 @@ import React from 'react';
 import Icons from '../assets/icons';
 import moment from 'moment';
 
+
 const VideoComment = ({ comment }) => {
+  
   return (
     <div className="bg-white p-4 rounded  mb-4 flex ml-14">
-      <div>
+      <div onClick={()=>window.location=`/channel/${comment?.snippet?.channelId}`}>
         {
-            comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl ?  <img src={comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl} alt="" className='w-[40px] h-[40px]'/> : (<div className='bg-gray-600 w-[40px] h-[40px] rounded-full'></div>)
+            comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl ?  <img src={comment?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl} alt="" className='w-[40px] h-[40px] cursor-pointer'/> : (<div className='bg-gray-600 w-[40px] h-[40px] rounded-full'></div>)
         }
         
       </div>

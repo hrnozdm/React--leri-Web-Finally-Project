@@ -8,12 +8,12 @@ const initialState={
 
 
 
-export const getChannelData=createAsyncThunk('getChannelData',async ()=>{
+export const getChannelData=createAsyncThunk('getChannelData',async (channelId)=>{
     try {
         const response=await axios.get('https://youtube-v31.p.rapidapi.com/channels',{
         params:{
             part: 'snippet,statistics',
-            id: 'UCBVjMGOIkavEAhyqpxJ73Dw'
+            id: channelId
         },
         headers:{
             'X-RapidAPI-Key': 'c672f60c79msh849b8d6caaac384p1fab90jsnfbf247a11c7f',
@@ -29,6 +29,7 @@ export const getChannelData=createAsyncThunk('getChannelData',async ()=>{
 });
 
 const ChannelSlice=createSlice({
+    name:'ChannelInfo',
     initialState,
     reducers:{},
     extraReducers:(builder)=>{

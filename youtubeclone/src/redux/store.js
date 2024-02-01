@@ -3,6 +3,7 @@ import HomeVideosSlice from "./HomeVideosSlice";
 import videoDetailSlice from "./DetailVideoSlice";
 import SearchSlice from "./SearchSlice";
 import VideoCommentSlice from "./CommentSlice";
+import ChannelSlice from "./ChannelSlice";
 
 
 export const store = configureStore({
@@ -11,6 +12,6 @@ export const store = configureStore({
     videoDetail: videoDetailSlice,
     searchVideos:SearchSlice,
     videoComment:VideoCommentSlice,
-   
+    channelInfo:ChannelSlice,
   },
 });
